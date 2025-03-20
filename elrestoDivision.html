@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Resto</title>
+    <!-- PyScript-->
+    <link rel="stylesheet" href="https://pyscript.net/snapshots/2023.11.1.RC3/core.css">
+    <script type="module" src="https://pyscript.net/snapshots/2023.11.1.RC3/core.js"></script>
+</head>
+
+<body>
+    <h1>Calculadora de Resto de División</h1>
+    <form id="division-form">
+        <label for="numerador">Numerador:</label>
+        <input type="number" id="numerador" required>
+        <br>
+        <label for="denominador">Denominador:</label>
+        <input type="number" id="denominador" required>
+        <br>
+        <button type="button" id="calcular-btn">Calcular Resto</button>
+    </form>
+    <div id="resultado"></div>
+
+
+    <py-script config="../pyscript.toml">
+        def calcular_resto(numerador, denominador):
+        return numerador % denominador
+
+        def mostrar_resultado(event):
+        numerador = int(document.getElementById("numerador").value)
+        denominador = int(document.getElementById("denominador").value)
+        resultado = calcular_resto(numerador, denominador)
+        document.getElementById("resultado").innerText = f"El resto de {numerador} dividido por {denominador} es:
+        {resultado}"
+
+        # Asignar la función al botón
+        document.getElementById("calcular-btn").addEventListener("click", mostrar_resultado)
+    </py-script>
+</body>
+
+</html>

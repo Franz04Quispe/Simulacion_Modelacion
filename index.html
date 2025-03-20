@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- PyScript-->
+    <link rel="stylesheet" href="https://pyscript.net/snapshots/2023.11.1.RC3/core.css">
+    <script type="module" src="https://pyscript.net/snapshots/2023.11.1.RC3/core.js"></script>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icono de la Página -->
+    <link rel="icon" type="image/png" href="assets/logoSalesiana.png" />
+
+    <title>Simulación y Modelación</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header bg-transparent py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                    </div>
+                    <div class="col-6 text-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-secondary-subtle fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="assets/logoSalesiana.png" alt="Logo" width="34"
+                        height="32" class="d-inline-block align-text-top">
+                </a>
+                <h5 class="fw-bold mt-1" style="color: rgb(224, 14, 14);">Simulación y Modelación - USB (2025)</h5>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Participaciones
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/restoDivision.html">Hallar Modulo</a></li>
+                                <li><a class="dropdown-item" href="pages/poison.html">Distribución de Poison - Variables Aleatorias Discretas</a></li>
+                                <li><a class="dropdown-item" href="pages/distribucionNormal.html">Distribución Normal  - Variables Aleatorias Continuas</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Próximas participaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Desactivado</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Unidad 1 -->
+        <div class="container">
+            <h1 class="text-danger">Unidad 1 - Principios Básicos de la Simulación</h1>
+            <p>
+                La simulación es una técnica poderosa utilizada para imitar o modelar el comportamiento de un sistema
+                en el tiempo, lo que permite analizar situaciones y predecir el impacto de diversas decisiones. En esta
+                unidad, se profundizará en los fundamentos de la simulación, los modelos utilizados, sus aplicaciones y
+                las pruebas estadísticas necesarias para validar los resultados de la simulación.
+            </p>
+        </div>
+
+        <div class="container-lg mt-3 border-warning text-center">
+            <div class="embed-responsive embed-responsive-21by9">
+                <iframe src="assets/Unidad 1 - Principios Básicos de la Simulación.pdf" height="650" width="900"
+                    title="Primera Unidad"></iframe>
+            </div>
+        </div>
+
+        <!-- Unidad 2 -->
+        <div class="container mt-3">
+            <h1 class="text-danger">Unidad 2 - Números Pseudo Aleatorios</h1>
+            <p>
+                Los números pseudo aleatorios son secuencias de números que se generan de manera determinista,
+                pero tienen propiedades que los hacen parecer aleatorios. Es decir, no son aleatorios en el sentido
+                clásico,
+                pero su distribución en un rango determinado parece seguir una distribución uniforme
+            </p>
+        </div>
+
+        <div class="container-lg mt-3 border-warning text-center">
+            <div class="embed-responsive embed-responsive-21by9">
+                <iframe src="assets/Unidad 2 - Números Pseudo Aleatorios.pdf" height="650" width="900"
+                    title="Primera Unidad"></iframe>
+            </div>
+        </div>
+
+        <!-- Unidad 3 -->
+        <div class="container mt-3">
+            <h1 class="text-danger">Unidad 3 - Variables Aleatorias</h1>
+            <p>Una variable aleatoria es una función matemática que asigna un valor numérico a cada posible resultado de
+                un experimento aleatorio. Los resultados son inciertos, pero la variable aleatoria los modela
+                numéricamente.
+            </p>
+        </div>
+
+        <div class="container-lg mt-3 border-warning text-center">
+            <div class="embed-responsive embed-responsive-21by9">
+                <iframe src="assets/Unidad 3 - VARIABLES ALEATORIAS.pdf" height="650" width="900"
+                    title="Primera Unidad"></iframe>
+            </div>
+        </div>
+
+
+        <!--  
+        <div class="container">
+            <script type="py" src="main.py" config="pyscript.toml"></script>
+        </div>
+
+        <section class="pyscript">
+            <h1>HOLA</h1>
+            Hello world! <br />
+            This is the current date and time, as computed by Python:
+            <script type="py">
+                    from pyscript import display
+                    from datetime import datetime
+                    from datetime import date
+                    a = 3**2
+                    display(a)
+    
+                    display("Hello, world!")
+                    now = datetime.now()
+                    display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+            </script>
+        </section>
+        -->
+
+        <!-- Archivo de JS -->
+        <script type="module" src="index.js"></script>
+        <!-- Archivo JS de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+        <!-- Fontawesome-->
+        <script src="https://kit.fontawesome.com/7479a63b20.js" crossorigin="anonymous"></script>
+    </main>
+
+    <!-- Footer -->
+    <div class="container-lg">
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-6 d-flex align-items-center">
+                <img class="" src="assets/bolivia.png" alt="" width="26" height="24">
+                <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2025 Franz Joel Quispe Mamani</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-facebook"></i></li>
+
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-linkedin"></i></li>
+
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-square-instagram"></i>
+                </li>
+
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-solid fa-building-columns"></i>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

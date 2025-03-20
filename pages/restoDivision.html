@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- PyScript-->
+    <link rel="stylesheet" href="https://pyscript.net/snapshots/2023.11.1.RC3/core.css">
+    <script type="module" src="https://pyscript.net/snapshots/2023.11.1.RC3/core.js"></script>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icono de la Página -->
+    <link rel="icon" type="image/png" href="../assets/logoSalesiana.png" />
+
+    <title>El modulo de una división</title>
+</head>
+
+<body>
+    <div class="header bg-transparent py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                </div>
+                <div class="col-6 text-right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-secondary-subtle fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/logoSalesiana.png" alt="Logo" width="34"
+                    height="32" class="d-inline-block align-text-top">
+            </a>
+            <h5 class="fw-bold mt-1" style="color: rgb(224, 14, 14);">Simulación y Modelación - USB (2025)</h5>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Participaciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../pages/restoDivision.html">Hallar Modulo</a></li>
+                            <li><a class="dropdown-item" href="../pages/poison.html">Distribución de Poison -
+                                    Variables Aleatorias Discretas</a></li>
+                            <li><a class="dropdown-item" href="../pages/distribucionNormal.html">Distribución Normal
+                                    - Variables Aleatorias Continuas</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Próximas participaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Desactivado</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main -->
+    <main>
+        <!-- Unidad 1 -->
+        <div class="container">
+            <h1 class="text-danger">Resto de División</h1>
+            <p>
+                El modulo devuelve el resto de la división del operando izquierdo 'a' llamado dividendo por el operando
+                derecho 'b' llamado divisor.
+                Se usa para obtener el residuo de un problema de división.
+                El resto de la división de a entre b SIN USAR MOD se obtiene así:
+                Usando la division entera que toma los valores enteros y no asi los reales de la division <br>
+                cociente = a//b ← Division entera <br>
+                Para hallar el resto se multiplica el cociente obtenido por el divisor para finalmente restarse con el
+                dividendo
+                resto = a - (cociente*b)
+            </p>
+        </div>
+
+        <div class="container-lg mt-3 border-warning text-center">
+            <div class="embed-responsive embed-responsive-21by9">
+                <img src="../assets/resto.jpg" alt="" width="300">
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>PyScript con Terminal</h1>
+            <textarea id="code-area" rows="10" cols="50">print("Hola, Bolivia")</textarea><br>
+            <button id="run-button">Ejecutar</button>
+            <div id="output"></div>
+        
+            <py-script>
+                from js import document
+                from pyodide.ffi import create_proxy
+        
+                def ejecutar(event):
+                    code_area = document.getElementById("code-area")
+                    output_div = document.getElementById("output")
+                    try:
+                        exec(code_area.value)
+                    except Exception as e:
+                        output_div.innerHTML = f"Error: {str(e)}"
+                
+                ejecutar_proxy = create_proxy(ejecutar)
+                run_button = document.getElementById("run-button")
+                run_button.addEventListener("click", ejecutar_proxy)
+            </py-script>
+
+            <!-- <py-repl>
+
+            </py-repl> -->
+        </div>
+
+
+        <!-- Archivo de JS -->
+        <!-- <script type="module" src="../index.js"></script> -->
+        <!-- Archivo JS de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+        <!-- Fontawesome-->
+        <script src="https://kit.fontawesome.com/7479a63b20.js" crossorigin="anonymous"></script>
+    </main>
+
+    <!-- Footer 
+    <div class="container-lg">
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-6 d-flex align-items-center">
+                <img class="" src="../assets/bolivia.png" alt="" width="26" height="24">
+                <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2025 Franz Joel Quispe Mamani</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-facebook"></i></li>
+
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-linkedin"></i></li>
+
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-square-instagram"></i>
+                </li>
+
+                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-solid fa-building-columns"></i>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    -->
+</body>
+
+</html>
